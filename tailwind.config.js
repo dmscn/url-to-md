@@ -1,6 +1,9 @@
+const colors = require('tailwindcss/colors');
+
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ['./src/renderer/**/*.{js,ts,jsx,tsx}'],
+  content: ['./src/renderer/**/*.{js,ts,jsx,tsx,ejs}'],
+  darkMode: false, // or 'media' or 'class'
   theme: {
     container: {
       center: true,
@@ -11,6 +14,8 @@ module.exports = {
     },
     extend: {
       colors: {
+        sky: colors.sky,
+        cyan: colors.cyan,
         border: 'hsl(var(--border))',
         input: 'hsl(var(--input))',
         ring: 'hsl(var(--ring))',
